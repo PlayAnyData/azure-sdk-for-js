@@ -102,9 +102,11 @@ export default {
         "@typescript-eslint/no-inferrable-types": "off",
         // We use empty extends and empty interface for shimming and renaming extensively
         "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-empty-object-type": "off",
         "@typescript-eslint/no-namespace": "error",
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+        "@typescript-eslint/no-unused-expressions": "off",
         "@typescript-eslint/no-useless-constructor": "error",
         "@typescript-eslint/no-var-requires": "off",
         "no-shadow": "off",
@@ -172,6 +174,7 @@ export default {
       ],
       rules: {
         "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-unused-expressions": "off",
       },
     },
   ],

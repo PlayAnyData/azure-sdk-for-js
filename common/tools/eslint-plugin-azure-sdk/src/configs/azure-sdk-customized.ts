@@ -39,6 +39,7 @@ const tsEslintCustomization: Record<string, SharedConfig.RuleEntry> = {
   "@typescript-eslint/no-inferrable-types": "off",
   // We use empty extends and empty interface for shimming and renaming extensively
   "@typescript-eslint/no-empty-interface": "off",
+  "@typescript-eslint/no-empty-object-type": "off",
   "@typescript-eslint/no-namespace": "error",
   "@typescript-eslint/no-non-null-assertion": "off",
   "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
@@ -159,7 +160,7 @@ export default (parser: FlatConfig.Parser): FlatConfig.ConfigArray => [
   },
   {
     name: "@azure/azure-sdk/recommended-json",
-    files: ["*.json"],
+    files: ["*.json", "*/*/*.json"],
     ignores: ["**/*.md/*.json", "**/src/**/*.json", "**/test/**/*.json"],
     languageOptions: {
       parser,
@@ -171,6 +172,7 @@ export default (parser: FlatConfig.Parser): FlatConfig.ConfigArray => [
     rules: {
       ...rules,
       "no-unused-expressions": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
     },
     settings: {
       main: "src/index.ts",
