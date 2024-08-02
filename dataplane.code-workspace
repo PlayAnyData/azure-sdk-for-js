@@ -314,8 +314,8 @@
     "files.exclude": {
       "**/node_modules": true
     },
-    "eslint.options": {
-      "resolvePluginsRelativeTo": "../../../common/tools/eslint-plugin-azure-sdk-helper"
+  "eslint.useFlatConfig": true,
+  "eslint.options": {
     }
   },
   "extensions": {
