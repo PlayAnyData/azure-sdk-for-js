@@ -32,4 +32,13 @@ export default [
       "import/no-extraneous-dependencies": "off",
     },
   },
+  {
+    files: ["test/**/*.ts"],
+    rules: {
+      "no-console": "off",
+      "space-before-function-paren": "off",
+      "no-unused-expressions": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
+    },
+  },
 ];
